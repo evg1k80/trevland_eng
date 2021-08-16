@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('_head.html',{
-	"title":"trevland"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
-				content
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+@@include('_head.html',{
+"title":"trevland"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<section class="hero">
+				<div class="hero__bg _ibg">
+					<img src="img/hero-bg.jpg" alt="">
+				</div>
+				<div class="hero__container _container">
+					<div class="hero__body">
+						<h1 class="hero__title">Railtrips To Here, There And Everywhere!</h1>
+						<p class="hero__text">
+							We all wish to start our year the best way possible and also according to a common belief if
+							you have a great start to
+							your.
+						</p>
+						<button class="hero__btn btn" type="button">Explore more</button>
+					</div>
+				</div>
+			</section>
+			<section class="location">
+				<div class="location__container _container">
+					<h2 class="location__title title">Popular Location</h2>
+					<p class="location__text">
+						For every one of us, travel came first. We’ve spent years living as nomads, pioneers, and voyagers— from island hopping
+						in the
+					</p>
+					<div class="location__body">
+						<a class="location__item item-location" href="#">
+							<div class="item-location__image">
+								<img src="img/location-01.jpg" alt="">
+							</div>
+							<div class="item-location__content">
+								<h3 class="item-location__title">Istanbul, Turkey</h3>
+								<p class="location__text">
+									Istanbul is a major city in Turkey that straddles Europe.
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
 </html>
