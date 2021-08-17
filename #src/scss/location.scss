@@ -1,14 +1,72 @@
 .location {
+	@include adaptiv-value ("padding-top", 140, 50, 1);
+	@include adaptiv-value ("padding-bottom", 140, 50, 1);
 	&__container {}
-	&__title {}
-	&__text {}
-	&__body {}
-	&__item {}
-
+	&__title {
+		margin: 0 0 20px 0;
+	}
+	&__text {
+		max-width: 735px;
+		margin-bottom: 50px;
+	}
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		@include adaptiv-value ("gap", 30, 15, 1);
+		@media (max-width: $md3+px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $md4+px) {
+			display: flex;
+			overflow-x: auto;
+		}
+	}
 }
 
 .item-location {
-	&__image {}
-	&__content {}
-	&__title {}
+	display: flex;
+	flex-direction: column;
+	background-color: $colorWhite;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 6px 35px rgba(0, 0, 0, 0.08);
+	transition: box-shadow 0.15s ease 0s, transform 0.15s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0px 6px 35px rgba($colorRed, 0.08);
+		}
+	}
+	@media (max-width: $md4+px) {
+		flex: 0 0 60%;
+	}
+ 	&__image {
+		padding: 98% 0 0 0;
+	}
+	&__content {
+		padding: 35px 27px 33px;
+		color: $colorBlack;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			padding: 15px;
+		}
+	}
+	&__title {
+		font-family: "Gelasio";
+		@include adaptiv-value ("font-size", 24, 16, 1);
+		line-height: 150%;
+		font-weight: 500;
+		margin: 0 0 10px 0;
+		
+		
+	}
+	&__text {
+		@include adaptiv-value ("font-size", 18, 12, 1);
+		line-height: 160%;
+		opacity: 0.6;
+		
+		
+	}
 }

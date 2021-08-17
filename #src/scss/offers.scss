@@ -1,0 +1,35 @@
+.offers {
+    @include adaptiv-value ("padding-bottom", 140, 50, 1);
+	&__container {}
+	&__title {
+        margin: 0 0 20px 0;
+    }
+	&__text {
+        margin-bottom: 60px;
+    }
+	&__slider {}
+	&_swiper {}
+	&_ibg {}
+}
+
+
+.slider {
+	&__body {}
+	&__slide {}
+	&__item {}
+	&__controls {}
+	&__dots {}
+	&__arrow {}
+	&__arrow--prev {}
+	&__arrow--next {}
+}
+.item-slider {
+	&__image {}
+	&__content {}
+	&__location {}
+	&__wrapper {}
+	&__country {}
+	&__rate {}
+	&__duration {}
+	&__price {}
+}
