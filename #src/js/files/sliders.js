@@ -64,7 +64,7 @@ function sliders_bild_callback(params) { }
 let slider = new Swiper('.slider__body', {
 	autoplay: {
 		delay: 3000,
-		disableOnInteraction: false,
+		disableOnInteraction: true,
 	},
 	observer: true,
 	observeParents: true,
