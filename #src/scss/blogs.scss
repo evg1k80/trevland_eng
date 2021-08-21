@@ -1,13 +1,28 @@
 .blogs {
+    
 	&__container {}
-	&__title {}
-	&__text {}
-	&__body {}
+	&__title {
+        margin: 0 0 20px 0;
+    }
+	&__text {
+        max-width: 581px;
+        margin-bottom: 56px;
+    }
+	&__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, min-content);
+        column-gap: 32px;
+        row-gap: 30px;
+    }
 	&__item {}	
 }
 
 
 .item-blog {
+    &:nth-child(4n + 1) {
+        grid-row: 3 span;
+    }
 	&__image {}
 	&__content {}
 	&__title {}
