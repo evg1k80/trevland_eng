@@ -62,10 +62,10 @@ if (sliderScrollItems.length > 0) {
 function sliders_bild_callback(params) { }
 
 let slider = new Swiper('.slider__body', {
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: true,
-	},
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: true,
+	// },
 	observer: true,
 	observeParents: true,
 	slidesPerView: "auto",

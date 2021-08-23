@@ -1,5 +1,5 @@
 .blogs {
-    
+    @include adaptiv-value ("padding-bottom", 140, 50, 1);
 	&__container {}
 	&__title {
         margin: 0 0 20px 0;
@@ -14,18 +14,90 @@
         grid-template-rows: repeat(3, min-content);
         column-gap: 32px;
         row-gap: 30px;
-    }
-	&__item {}	
+        @media (max-width: $md3+px) {
+           display: flex;
+           flex-direction: column;
+        }
+    }	
 }
 
 
 .item-blog {
+    display: flex;
+    align-items: center;
+    @media (max-width: $md1+px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @media (max-width: $md3+px) {
+        
+    }
     &:nth-child(4n + 1) {
         grid-row: 3 span;
+        flex-direction: column;
+        align-items: flex-start;
+        .item-blog__image {
+            padding: 0 0 76% 0;
+            margin: 0 0 35px 0;
+        }
+        @media (max-width: $md1+px) {
+            grid-column: 2 span;
+        }
+        
     }
-	&__image {}
-	&__content {}
-	&__title {}
-	&__text {}
-	&__author {}
+	&__image {
+        flex: 0 0 263px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 0 0 38% 0;
+        margin: 0 27px 0 0;
+        transition: transform 0.15s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.01);
+            }
+        }
+        @media (max-width: $md1+px) {
+            padding: 0 0 65% 0;
+            margin: 0 0 35px 0;
+        }
+    }
+	&__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+	&__title {
+        font-family: "Gelasio";
+        font-size: 20px;
+        line-height: 150%;
+        font-weight: 500;
+        color: $colorBlack;
+        display: inline-block;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: text-decoration-color 0.15s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: $colorBlack;
+            }
+        }
+        
+    }
+	&__text {
+        font-size: 18px;
+        line-height: 150%;
+        font-weight: 400;
+        opacity: 0.6;
+        padding: 10px 0;
+        flex: 1 1 auto;
+    }
+	&__author {
+        font-size: 20px;
+        line-height: 150%;
+        font-weight: 500;
+        color: $colorBlack;
+    }
 }

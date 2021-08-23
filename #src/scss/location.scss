@@ -63,7 +63,8 @@
 		line-height: 150%;
 		font-weight: 500;
 		margin: 0 0 10px 0;
-		flex: 1 1 auto;	
+		flex: 1 1 auto;
+		
 	}
 	&__text {
 		@include adaptiv-value ("font-size", 18, 12, 1);
