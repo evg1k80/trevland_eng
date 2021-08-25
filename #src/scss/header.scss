@@ -22,17 +22,7 @@
 			min-height: 60px;
 		}
 	}
-	&__logo {
-		font-family: "Ribeye";
-		font-size: 24px;
-		line-height: 150%;
-		color: $colorWhite;
-		letter-spacing: 0.06em;
-		@media (max-width: $md4+px) {
-			font-size: 20px;
-		}
-
-	}
+	
 	&__menu {
 		@media (min-width: $md3+px) {
 			flex: 0 1 470px;
@@ -87,7 +77,7 @@
 			padding: 5px 0;
 		}
 		@media (max-width: $md3+px) {
-			&:not(last-child) {
+			&:not(:last-child) {
 				margin: 0 0 30px 0;
 			}
 		}
