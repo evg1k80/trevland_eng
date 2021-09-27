@@ -2,15 +2,12 @@
     position: relative;
     height: 100vh;
     min-height: 600px;
-    
-    
     &__bg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        // transform: matrix(-1, 0, 0, 1, 0, 0);
         &::after {
             content: '';
             width: 100%;
@@ -34,7 +31,6 @@
     }
 	&__title {
         font-family: "Gelasio";
-        // font-size: 65px;
         @include adaptiv-value ("font-size", 65, 32, 1);
         line-height: 120%;
         color: $colorWhite;

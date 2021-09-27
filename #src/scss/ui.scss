@@ -59,6 +59,9 @@
 		top: 0;
 		left: 0;
 		object-fit: cover;
+		@media (max-width: $md1+px) {
+			object-position: right;
+		}
 	}
 }
 
